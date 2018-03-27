@@ -14,6 +14,11 @@ public class Maze : MonoBehaviour {
 
 	public MazeDoor doorPrefab;
 
+    public Coin coinPrefab;
+
+    [Range(0f, 1f)]
+    public float coinProbability;
+
 	[Range(0f, 1f)]
 	public float doorProbability;
 
@@ -72,6 +77,7 @@ public class Maze : MonoBehaviour {
 			MazeCell neighbor = GetCell(coordinates);
 			if (neighbor == null) {
 				neighbor = CreateCell(coordinates);
+                neighbor.CreateCoin(this.coinPrefab, this.coinProbability);
 				CreatePassage(currentCell, neighbor, direction);
 				activeCells.Add(neighbor);
 			}

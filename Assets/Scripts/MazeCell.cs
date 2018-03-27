@@ -36,6 +36,19 @@ public class MazeCell : MonoBehaviour {
 		transform.GetChild(0).GetComponent<Renderer>().material = room.settings.floorMaterial;
 	}
 
+    public void CreateCoin(Coin coinPrefab, float coinProbability)
+    {
+        Coin coin = Random.value < coinProbability ? coinPrefab : null;
+        if (coin==null)
+        {
+            return;
+        }
+
+        Coin newCoin = Instantiate(coin) as Coin;
+        newCoin.transform.parent = this.transform;
+        newCoin.transform.localPosition = Vector3.zero;
+    }
+
 	public MazeCellEdge GetEdge (MazeDirection direction) {
 		return edges[(int)direction];
 	}
