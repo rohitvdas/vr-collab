@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 
-public class MazeCell : MonoBehaviour {
+public class MazeCell : NetworkBehaviour
+{
 
 	public IntVector2 coordinates;
 

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 
-public abstract class MazeCellEdge : MonoBehaviour {
+public abstract class MazeCellEdge : NetworkBehaviour
+{
 
 	public MazeCell cell, otherCell;
 

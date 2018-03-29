@@ -296,7 +296,7 @@ namespace Prototype.NetworkLobby
         }
 
       
- 
+ /*
   //Called on server.
   //This allows customization of the creation of the GamePlayer object on the server.
   //By default the gamePlayerPrefab is used to create the game-player, but this function allows that behaviour
@@ -304,7 +304,7 @@ namespace Prototype.NetworkLobby
   public override GameObject OnLobbyServerCreateGamePlayer(NetworkConnection conn, short playerControllerId)
         {
             //default player prefab index
-            int prefabIndex = 0;
+            int prefabIndex = 1;
 
             //For each lobby player in scene
             foreach (LobbyPlayer lp in FindObjectsOfType<LobbyPlayer>())
@@ -320,21 +320,15 @@ namespace Prototype.NetworkLobby
                 else if (ni.connectionToServer != null && connectionID == conn.connectionId)
                     prefabIndex = 1; //if on client, should be deity
                     //connectionID = ni.connectionToServer.connectionId;
-
-                /*
-                //If connection id on lobby player is same as connection id
-                if (connectionID == conn.connectionId)
-                {
-                    //then set prefab index to spawn value
-                    prefabIndex = lp.spawnTypeValue;
-                }
-                */
+                
             }
 
             //Spawn game object from spawn list
             GameObject playerPrefab = Instantiate(spawnPrefabs[prefabIndex]);
             return playerPrefab;
         }
+        */
+        
 
         public override void OnLobbyServerPlayerRemoved(NetworkConnection conn, short playerControllerId)
         {

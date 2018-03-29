@@ -31,10 +31,10 @@ public class Player : NetworkBehaviour {
 	}
 
 	private void Update () {
-        cam.enabled = false;
 
         if (!isLocalPlayer)
         {
+            cam.enabled = false;
             return;
         }
 

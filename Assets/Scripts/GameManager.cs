@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : NetworkBehaviour {
 
 	public Maze mazePrefab;
 
 	public Player playerPrefab;
 
-	private Maze mazeInstance;
+	public Maze mazeInstance;
 
 	private Player playerInstance;
 
@@ -21,16 +22,18 @@ public class GameManager : MonoBehaviour {
 			RestartGame();
 		}
         */
-	}
+    }
 
-	private void BeginGame () {
+    //[ClientRpc]
+    private void BeginGame () {
 		Camera.main.clearFlags = CameraClearFlags.Skybox;
 		Camera.main.rect = new Rect(0f, 0f, 1f, 1f);
 		mazeInstance = Instantiate(mazePrefab) as Maze;
 		mazeInstance.Generate();
-		//playerInstance = Instantiate(playerPrefab) as Player;
-		//playerInstance.SetLocation(mazeInstance.GetCell(mazeInstance.RandomCoordinates));
-		Camera.main.clearFlags = CameraClearFlags.Depth;
+        NetworkServer.Spawn(mazeInstance.gameObject);
+        //playerInstance = Instantiate(playerPrefab) as Player;
+        //playerInstance.SetLocation(mazeInstance.GetCell(mazeInstance.RandomCoordinates));
+        Camera.main.clearFlags = CameraClearFlags.Depth;
 		Camera.main.rect = new Rect(0f, 0f, 0.5f, 0.5f);
 	}
 

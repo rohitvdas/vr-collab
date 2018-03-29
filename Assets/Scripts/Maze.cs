@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 using System.Collections.Generic;
 
-public class Maze : MonoBehaviour {
+public class Maze : NetworkBehaviour
+{
 
 	public IntVector2 size;
 
@@ -45,6 +47,7 @@ public class Maze : MonoBehaviour {
 	}
 
 	public void Generate () {
+        Random.InitState(4); 
 		//WaitForSeconds delay = new WaitForSeconds(generationStepDelay);
 		cells = new MazeCell[size.x, size.z];
 		List<MazeCell> activeCells = new List<MazeCell>();
@@ -56,9 +59,9 @@ public class Maze : MonoBehaviour {
 		for (int i = 0; i < rooms.Count; i++) {
 			//rooms[i].Hide();
 		}
-	}
+    }
 
-	private void DoFirstGenerationStep (List<MazeCell> activeCells) {
+    private void DoFirstGenerationStep (List<MazeCell> activeCells) {
 		MazeCell newCell = CreateCell(RandomCoordinates);
 		newCell.Initialize(CreateRoom(-1));
 		activeCells.Add(newCell);
