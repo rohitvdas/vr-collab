@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vr-collab", "vr-collab.csproj", "{0C7A605A-6A5D-6509-3A5D-E9F4CA9F0654}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vr-collab.Plugins", "vr-collab.Plugins.csproj", "{8F0D3F28-B989-D829-07E1-CE1B2372F555}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vr-collab.Editor.Plugins", "vr-collab.Editor.Plugins.csproj", "{A0BEBE79-4C65-157E-0BC5-94446A4B4D00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{0C7A605A-6A5D-6509-3A5D-E9F4CA9F0654}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C7A605A-6A5D-6509-3A5D-E9F4CA9F0654}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C7A605A-6A5D-6509-3A5D-E9F4CA9F0654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F0D3F28-B989-D829-07E1-CE1B2372F555}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F0D3F28-B989-D829-07E1-CE1B2372F555}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F0D3F28-B989-D829-07E1-CE1B2372F555}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F0D3F28-B989-D829-07E1-CE1B2372F555}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0BEBE79-4C65-157E-0BC5-94446A4B4D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0BEBE79-4C65-157E-0BC5-94446A4B4D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0BEBE79-4C65-157E-0BC5-94446A4B4D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0BEBE79-4C65-157E-0BC5-94446A4B4D00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

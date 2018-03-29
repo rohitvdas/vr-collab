@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 
-public class Player : MonoBehaviour {
+public class Player : NetworkBehaviour {
+
+    public Camera cam;
 
 	private MazeCell currentCell;
 
@@ -28,6 +31,21 @@ public class Player : MonoBehaviour {
 	}
 
 	private void Update () {
+        cam.enabled = false;
+
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+
+        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
+        var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+
+        transform.Rotate(0, x, 0);
+        transform.Translate(0, 0, z);
+
+
+        /*
 		if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
 			Move(currentDirection);
 		}
@@ -46,5 +64,6 @@ public class Player : MonoBehaviour {
 		else if (Input.GetKeyDown(KeyCode.E)) {
 			Look(currentDirection.GetNextClockwise());
 		}
-	}
+        */
+    }
 }
