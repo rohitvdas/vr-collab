@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    private GameManager gameManager;
+
+    // Use this for initialization
+    void Start ()
+    {
+       gameManager = (GameManager)FindObjectOfType(typeof(GameManager));
+    }
+    
+
+// Update is called once per frame
+    void Update () {
 		
 	}
 
@@ -20,6 +24,7 @@ public class Coin : MonoBehaviour {
         if (other.CompareTag("Player"))
         {
             Destroy(gameObject);
+            gameManager.coinCollected();
         }
     }
 

@@ -23,11 +23,9 @@ GameObject:
   - component: {fileID: 23116391163885400}
   - component: {fileID: 114169630214067176}
   - component: {fileID: 135110296481475912}
-  - component: {fileID: 114118986519584848}
-  - component: {fileID: 114513305216065214}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,7 +52,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -70,7 +67,6 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -86,38 +82,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1347975506535148}
   m_Mesh: {fileID: 4300000, guid: f810a82c4bf58d646b9ef8bdce1668a3, type: 3}
---- !u!114 &114118986519584848
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1347975506535148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 100
-    i1: 247
-    i2: 14
-    i3: 88
-    i4: 121
-    i5: 39
-    i6: 185
-    i7: 148
-    i8: 154
-    i9: 150
-    i10: 44
-    i11: 11
-    i12: 217
-    i13: 167
-    i14: 213
-    i15: 167
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
 --- !u!114 &114169630214067176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,27 +93,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e620c01222bb6488ac23de0414aa72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114513305216065214
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1347975506535148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 1
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
 --- !u!135 &135110296481475912
 SphereCollider:
   m_ObjectHideFlags: 1

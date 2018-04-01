@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 11400000}
   - component: {fileID: 114949702077662440}
   - component: {fileID: 114017610428199746}
+  - component: {fileID: 65677314055207108}
   m_Layer: 0
   m_Name: Maze Cell
   m_TagString: Untagged
@@ -72,7 +73,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -88,7 +88,6 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -133,6 +132,8 @@ MonoBehaviour:
     x: 0
     z: 0
   room: {fileID: 0}
+  redMaterial: {fileID: 2100000, guid: 2bfb8e077e352a14f90cf096af97d161, type: 2}
+  floor: {fileID: 100000}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -144,6 +145,18 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100002}
   m_IsPrefabParent: 1
+--- !u!65 &65677314055207108
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 5, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114017610428199746
 MonoBehaviour:
   m_ObjectHideFlags: 1

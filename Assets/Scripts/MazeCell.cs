@@ -12,6 +12,10 @@ public class MazeCell : NetworkBehaviour
 
 	private int initializedEdgeCount;
 
+    public Material redMaterial;
+
+    public GameObject floor;
+
 	public bool IsFullyInitialized {
 		get {
 			return initializedEdgeCount == MazeDirections.Count;
@@ -81,4 +85,45 @@ public class MazeCell : NetworkBehaviour
 			edges[i].OnPlayerExited();
 		}
 	}
+
+    private void Update()
+    {
+
+        /*
+        Player[] players = FindObjectsOfType<Player>();
+        Player navigator = null;
+        foreach (Player play in players)
+        {
+            if (play.tag=="Player")
+            {
+                navigator = play;
+            }
+        }
+
+        if (navigator == null) return;
+
+        Vector3 playerPos = navigator.transform.position;
+        IntVector2 cellPos = this.coordinates;
+
+        double minX, minZ, maxX, maxZ;
+        minX = cellPos.x - 0.5;
+        maxX = cellPos.x + 0.5;
+        minZ = cellPos.z - 0.5;
+        maxZ = cellPos.z + 0.5;
+
+        if (playerPos.x <= maxX && playerPos.z <= maxZ && playerPos.x >= minX && playerPos.z >= minZ)
+        {
+            this.GetComponent<MeshRenderer>().material = redMaterial;
+        }
+        */
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("collision occurred");
+        if (other.CompareTag("Player"))
+        {
+            floor.GetComponent<MeshRenderer>().material = redMaterial;
+        }
+    }
 }

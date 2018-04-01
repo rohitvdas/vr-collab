@@ -9,7 +9,20 @@ public class Player : NetworkBehaviour {
 
 	private MazeDirection currentDirection;
 
-	public void SetLocation (MazeCell cell) {
+    private bool isDeity = false;
+
+    private Rigidbody playerObject;
+
+    public float speed;
+
+    private CharacterController _controller;
+
+    private void Start()
+    {
+        _controller = GetComponent<CharacterController>();
+    }
+
+    public void SetLocation (MazeCell cell) {
 		if (currentCell != null) {
 			currentCell.OnPlayerExited();
 		}
@@ -30,7 +43,30 @@ public class Player : NetworkBehaviour {
 		currentDirection = direction;
 	}
 
-	private void Update () {
+    private void FixedUpdate()
+    {
+        /*
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+
+        //float moveHorizontal = Input.GetAxis("Horizontal");
+        //float moveVertical = Input.GetAxis("Vertical");
+
+        //Vector3 movement = new Vector3(moveHorizontal * speed * Time.deltaTime, 0.0f, moveVertical * speed * Time.deltaTime);
+
+        //playerObject.MovePosition(transform.position + movement);
+
+        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
+        var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+
+        transform.Rotate(0, x, 0);
+        transform.Translate(0, 0, z);
+        */
+    }
+
+    private void Update () {
 
         if (!isLocalPlayer)
         {
@@ -38,11 +74,32 @@ public class Player : NetworkBehaviour {
             return;
         }
 
-        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-        var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            isDeity = true;
+            transform.Rotate(20, 0, 0);
+            this.tag = "Deity";
+        }
 
-        transform.Rotate(0, x, 0);
-        transform.Translate(0, 0, z);
+        Vector3 move = new Vector3(0, 0, Input.GetAxis("Vertical"));
+        move = transform.TransformDirection(move);
+        _controller.Move(move * Time.deltaTime * speed);
+        transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f, 0);
+        /*
+        if(move!=Vector3.zero)
+        {
+            transform.forward = move;
+        }
+        */
+
+        if (isDeity)
+        {
+            GameObject[] coins = GameObject.FindGameObjectsWithTag("Coin");
+            foreach (GameObject coin in coins)
+            {
+                coin.GetComponent<Renderer>().enabled = false;
+            }
+        }
 
 
         /*
