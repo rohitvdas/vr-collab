@@ -3,6 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomMaze", "RandomMaze.csproj", "{442B47B2-1E28-9B19-DF3E-3C9AF3812D8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomMaze.Plugins", "RandomMaze.Plugins.csproj", "{FDEF399B-FF40-E205-6E74-CE1396C13057}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomMaze.Editor.Plugins", "RandomMaze.Editor.Plugins.csproj", "{26F81398-7335-7067-3ABA-89DFCC610036}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomMaze.Editor", "RandomMaze.Editor.csproj", "{55E12FDF-57A2-76E1-6D46-668B81D78C23}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +19,18 @@ Global
 		{442B47B2-1E28-9B19-DF3E-3C9AF3812D8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{442B47B2-1E28-9B19-DF3E-3C9AF3812D8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{442B47B2-1E28-9B19-DF3E-3C9AF3812D8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDEF399B-FF40-E205-6E74-CE1396C13057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDEF399B-FF40-E205-6E74-CE1396C13057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDEF399B-FF40-E205-6E74-CE1396C13057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDEF399B-FF40-E205-6E74-CE1396C13057}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26F81398-7335-7067-3ABA-89DFCC610036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26F81398-7335-7067-3ABA-89DFCC610036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26F81398-7335-7067-3ABA-89DFCC610036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26F81398-7335-7067-3ABA-89DFCC610036}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55E12FDF-57A2-76E1-6D46-668B81D78C23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55E12FDF-57A2-76E1-6D46-668B81D78C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55E12FDF-57A2-76E1-6D46-668B81D78C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55E12FDF-57A2-76E1-6D46-668B81D78C23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

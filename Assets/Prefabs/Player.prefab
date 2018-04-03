@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2000000}
-  isDeity: 1
+  isDeity: 0
   speed: 5
 --- !u!124 &12400000
 Behaviour:
