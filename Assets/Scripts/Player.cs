@@ -9,7 +9,7 @@ public class Player : NetworkBehaviour {
 
 	private MazeDirection currentDirection;
 
-    private bool isDeity = false;
+    public bool isDeity = false;
 
     private Rigidbody playerObject;
 
@@ -20,6 +20,15 @@ public class Player : NetworkBehaviour {
     private void Start()
     {
         _controller = GetComponent<CharacterController>();
+        if (isDeity)
+        {
+            this.transform.position = new Vector3(0, 15, -20);
+            this.transform.Rotate(40, 0, 0);
+        }
+        else
+        {
+            this.transform.position = new Vector3(0, 0, 0);
+        }
     }
 
     public void SetLocation (MazeCell cell) {
@@ -74,12 +83,14 @@ public class Player : NetworkBehaviour {
             return;
         }
 
+        /*
         if (Input.GetKeyDown(KeyCode.Space))
         {
             isDeity = true;
             transform.Rotate(20, 0, 0);
             this.tag = "Deity";
         }
+        */
 
         Vector3 move = new Vector3(0, 0, Input.GetAxis("Vertical"));
         move = transform.TransformDirection(move);

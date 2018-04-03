@@ -3,6 +3,7 @@ using UnityEngine.Networking;
 
 public class MazeCell : NetworkBehaviour
 {
+    public bool enablePathTracing = false;
 
 	public IntVector2 coordinates;
 
@@ -120,6 +121,8 @@ public class MazeCell : NetworkBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (!enablePathTracing) return;
+
         Debug.Log("collision occurred");
         if (other.CompareTag("Player"))
         {
