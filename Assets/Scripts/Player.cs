@@ -92,10 +92,17 @@ public class Player : NetworkBehaviour {
         }
         */
 
-        Vector3 move = new Vector3(0, 0, Input.GetAxis("Vertical"));
-        move = transform.TransformDirection(move);
+
+        Quaternion playerRotation = cam.transform.rotation;
+        playerRotation.x = 0;
+        playerRotation.z = 0;      
+
+        this.transform.rotation = playerRotation;
+
+        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        //move = transform.TransformDirection(move);
         _controller.Move(move * Time.deltaTime * speed);
-        transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f, 0);
+        //transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f, 0);
         /*
         if(move!=Vector3.zero)
         {
