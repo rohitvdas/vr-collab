@@ -76,13 +76,13 @@ public class Player : NetworkBehaviour {
     }
 
     private void Update () {
-
+        
         if (!isLocalPlayer)
         {
             cam.enabled = false;
             return;
         }
-
+        
         /*
         if (Input.GetKeyDown(KeyCode.Space))
         {
