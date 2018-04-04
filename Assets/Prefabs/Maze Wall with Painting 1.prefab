@@ -240,7 +240,7 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_InflateMesh: 1
-  m_SkinWidth: 0.05
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
 --- !u!114 &114211106308794926
 MonoBehaviour:

@@ -115,11 +115,13 @@ public class Player : NetworkBehaviour {
 
         if (isDeity)
         {
+            
             GameObject[] coins = GameObject.FindGameObjectsWithTag("Coin");
             foreach (GameObject coin in coins)
             {
                 coin.GetComponent<Renderer>().enabled = false;
             }
+            
         }
 
 
