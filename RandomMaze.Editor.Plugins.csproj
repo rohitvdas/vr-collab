@@ -283,6 +283,12 @@
     <Reference Include="Facebook.Unity.Settings">
       <HintPath>Library\FacebookSDK\Facebook.Unity.Settings.dll</HintPath>
     </Reference>
+    <Reference Include="MiddleVR_dotNet">
+      <HintPath>Assets\MiddleVR\MiddleVR_dotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="MiddleVR_Unity3D">
+      <HintPath>Assets\MiddleVR\MiddleVR_Unity3D.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="RandomMaze.csproj">
@@ -301,6 +307,11 @@
     <None Include="Assets\Fonts\OpenSans\License!.txt" />
     <None Include="Assets\Lobby\Documentation.txt" />
     <None Include="Assets\Lobby\Instruction.txt" />
+    <None Include="Assets\MiddleVR\Assets\Materials\AlphaSelfIllum.shader" />
+    <None Include="Assets\MiddleVR\Assets\Materials\OVRLensCorrection.shader" />
+    <None Include="Assets\MiddleVR\Assets\Materials\ScreenProximityWarningShader.shader" />
+    <None Include="Assets\MiddleVR\Assets\Materials\VR3DTextShader.shader" />
+    <None Include="Assets\MiddleVR\Assets\Materials\VRRiftDK2DistortionMesh.shader" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
