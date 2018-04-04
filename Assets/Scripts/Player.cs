@@ -23,7 +23,7 @@ public class Player : NetworkBehaviour {
         if (isDeity)
         {
             this.transform.position = new Vector3(0, 15, -20);
-            this.transform.Rotate(40, 0, 0);
+            //this.transform.Rotate(40, 0, 0);
         }
         else
         {
@@ -92,16 +92,19 @@ public class Player : NetworkBehaviour {
         }
         */
 
-
+        /*
         Quaternion playerRotation = cam.transform.rotation;
         playerRotation.x = 0;
         playerRotation.z = 0;      
 
         this.transform.rotation = playerRotation;
+        */
 
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        //move = transform.TransformDirection(move);
-        _controller.Move(move * Time.deltaTime * speed);
+        move = cam.transform.TransformDirection(move);
+        move.y = 0;
+        move *= speed;
+        _controller.Move(move * Time.deltaTime);
         //transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f, 0);
         /*
         if(move!=Vector3.zero)

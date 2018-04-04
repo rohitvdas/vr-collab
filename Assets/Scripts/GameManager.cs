@@ -17,6 +17,10 @@ public class GameManager : NetworkBehaviour {
 
     public Text coinText;
 
+    public float countdownVal;
+
+    public Text countdownText;
+
 	private void Start () {
 		BeginGame();
 	}
@@ -27,6 +31,16 @@ public class GameManager : NetworkBehaviour {
 			RestartGame();
 		}
         */
+    }
+
+    public IEnumerator StartCountdown()
+    {
+        while (countdownVal>0)
+        {
+            yield return new WaitForSeconds(1.0f);
+            countdownVal--;
+            this.countdownText.text = "Seconds Remaining: " + this.countdownVal.ToString();
+        }
     }
 
     //[ClientRpc]
@@ -42,9 +56,11 @@ public class GameManager : NetworkBehaviour {
 		//Camera.main.rect = new Rect(0f, 0f, 0.5f, 0.5f);
         this.coinsCollected = 0;
         this.coinText.text = "Coins Collected: " + this.coinsCollected.ToString();
-	}
+        this.countdownText.text = "Seconds Remaining: " + this.countdownVal.ToString();
+        StartCoroutine(StartCountdown());
+    }
 
-	private void RestartGame () {
+    private void RestartGame () {
 		//StopAllCoroutines();
 		Destroy(mazeInstance.gameObject);
 		if (playerInstance != null) {

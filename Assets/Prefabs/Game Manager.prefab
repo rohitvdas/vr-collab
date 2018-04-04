@@ -87,10 +87,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mazePrefab: {fileID: 11400000, guid: a2395bb8a91944f21b621f2614d6db99, type: 2}
-  playerPrefab: {fileID: 11400000, guid: 4c6e2fb6da7fd4f5aa5c8463ebb46e79, type: 2}
+  playerPrefab: {fileID: 0}
   mazeInstance: {fileID: 0}
   coinsCollected: 0
-  coinText: {fileID: 132181330755192526}
+  coinText: {fileID: 0}
+  countdownVal: 60
+  countdownText: {fileID: 0}
 --- !u!114 &114967095172512758
 MonoBehaviour:
   m_ObjectHideFlags: 1
