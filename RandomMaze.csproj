@@ -235,12 +235,6 @@
     <Reference Include="Facebook.Unity.Settings">
       <HintPath>Library\FacebookSDK\Facebook.Unity.Settings.dll</HintPath>
     </Reference>
-    <Reference Include="MiddleVR_dotNet">
-      <HintPath>Assets\MiddleVR\MiddleVR_dotNet.dll</HintPath>
-    </Reference>
-    <Reference Include="MiddleVR_Unity3D">
-      <HintPath>Assets\MiddleVR\MiddleVR_Unity3D.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="RandomMaze.Plugins.csproj">
@@ -261,81 +255,7 @@
     <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyServerEntry.cs" />
     <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyServerList.cs" />
     <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyTopPanel.cs" />
-    <Compile Include="Assets\MiddleVR\Assets\VRMenu\VRMenu.cs" />
-    <Compile Include="Assets\MiddleVR\Assets\VRMenu\VRMenuManager.cs" />
-    <Compile Include="Assets\MiddleVR\Assets\VRMenu\VRMenuMaximizeButton.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Cluster\VRApplySharedTransform.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Cluster\VRClusterObject.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Cluster\VRShareTransform.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\GUI\GUIForWand\VRCanvas.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\GUI\GUIForWand\VRWandRaycaster.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\GUI\VRWebView.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Interactions\VRActor.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Interactions\VRAttachToNode.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Interactions\VRNode3DSynchronization.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Internal\VRElasticRepresentation.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Internal\VRInteraction.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Internal\VRInteractionManipulationHomer.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Internal\VRInteractionManipulationRay.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Internal\VRInteractionManipulationReturnObjects.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Internal\VRInteractionNavigationElastic.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Internal\VRInteractionNavigationGrabWorld.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Internal\VRInteractionNavigationWandJoystick.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Internal\VRInteractionScreenProximityWarning.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Internal\VRInteractionVirtualHandGogo.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Internal\VRManagerPostFrame.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Internal\VRManagerScript.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Internal\VRNavigationCollision.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Internal\VRPhysicsJointLimits.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Internal\VRRaySelection.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Internal\VRScreenWarningAnimation.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Internal\VRSelectionManager.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Internal\VRTouch.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Internal\VRWand.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Internal\VRWandNavigation.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Networking\VRNetworkAddOptionsToMenu.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Networking\VRNetworkCommandLineParser.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Networking\VRNetworkInteractionsHandler.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Networking\VRNetworkLocalObject.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Networking\VRNetworkSpawnLocalObjects.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Networking\VRSampleNetworkManager.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Networking\VRSampleNetworkPlayerScript.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Networking\VRVoiceChat\VRVoiceChatManager.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Physics\VRPhysicsBody.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Physics\VRPhysicsBodyManipulatorIPSI.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Physics\VRPhysicsConstraintBallSocket.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Physics\VRPhysicsConstraintCylindrical.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Physics\VRPhysicsConstraintFixed.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Physics\VRPhysicsConstraintHelical.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Physics\VRPhysicsConstraintHinge.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Physics\VRPhysicsConstraintPlanar.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Physics\VRPhysicsConstraintPrismatic.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Physics\VRPhysicsConstraintUJoint.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Physics\VRPhysicsDeactivateAllContacts.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Physics\VRPhysicsDisableAllCollisions.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Physics\VRPhysicsDisableCollisions.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Physics\VRPhysicsEnableCollisions.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Physics\VRPhysicsShowContacts.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Samples\GUI\VRCustomizeDefaultMenu.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Samples\GUI\VRGUIHTMLBasicSample.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Samples\GUI\VRGUIHTMLJQuerySample.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Samples\GUI\VRGUIMenuSample.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Samples\Physics\VRApplyForceTorqueSample.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Samples\Physics\VRChangeAttachedPhysicsBodyIPSISample.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Samples\Physics\VRTrackHaptionDeviceButtonsStatusSample.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Samples\TriggerHapticPulseOnVRAction.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Samples\VRActionSample.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Samples\VRAPISample.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Samples\VRCalibrateTracker.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Samples\VRCalibrateTrackerYaw.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Samples\VRClusterCommandSample.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Samples\VRFollowNode.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Samples\VRInteractionSample.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Samples\VRShortcutInvertEyes.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Samples\VRShortcutReload.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Samples\VRVirtualTrackerMapping.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Samples\VRVirtualTrackerSimulation.cs" />
-    <Compile Include="Assets\MiddleVR\Scripts\Samples\VRZSpaceUsageSample.cs" />
+    <Compile Include="Assets\Scripts\CanvasFollowCamera.cs" />
     <Compile Include="Assets\Scripts\Coin.cs" />
     <Compile Include="Assets\Scripts\CustomNetworkManager.cs" />
     <Compile Include="Assets\Scripts\Deity.cs" />
@@ -459,11 +379,6 @@
     <None Include="Assets\Fonts\OpenSans\License!.txt" />
     <None Include="Assets\Lobby\Documentation.txt" />
     <None Include="Assets\Lobby\Instruction.txt" />
-    <None Include="Assets\MiddleVR\Assets\Materials\AlphaSelfIllum.shader" />
-    <None Include="Assets\MiddleVR\Assets\Materials\OVRLensCorrection.shader" />
-    <None Include="Assets\MiddleVR\Assets\Materials\ScreenProximityWarningShader.shader" />
-    <None Include="Assets\MiddleVR\Assets\Materials\VR3DTextShader.shader" />
-    <None Include="Assets\MiddleVR\Assets\Materials\VRRiftDK2DistortionMesh.shader" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />

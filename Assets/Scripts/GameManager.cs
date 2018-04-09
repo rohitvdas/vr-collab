@@ -21,8 +21,13 @@ public class GameManager : NetworkBehaviour {
 
     public Text countdownText;
 
+    public AudioClip coin;
+
+    AudioSource aScorce;
+
 	private void Start () {
 		BeginGame();
+        aScorce = this.GetComponent<AudioSource>();
 	}
 	
 	private void Update () {
@@ -71,6 +76,8 @@ public class GameManager : NetworkBehaviour {
 
     public void coinCollected()
     {
+        aScorce.clip = coin;
+        aScorce.Play();
         this.coinsCollected++;
         this.coinText.text = "Coins Collected: " + this.coinsCollected.ToString();
     }

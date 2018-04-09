@@ -20,7 +20,6 @@ public class Coin : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("collision occurred");
         if (other.CompareTag("Player"))
         {
             Destroy(gameObject);

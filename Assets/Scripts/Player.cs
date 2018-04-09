@@ -17,6 +17,10 @@ public class Player : NetworkBehaviour {
 
     private CharacterController _controller;
 
+    public Canvas PlayerCanvas;
+
+    public Canvas DeityCanvas;
+
     private void Start()
     {
         _controller = GetComponent<CharacterController>();
@@ -24,11 +28,18 @@ public class Player : NetworkBehaviour {
         {
             this.transform.position = new Vector3(0, 15, -20);
             //this.transform.Rotate(40, 0, 0);
+            this.DeityCanvas = GameObject.Find("DeityCanvas").GetComponent<Canvas>();
+            this.DeityCanvas.GetComponent<CanvasFollowCamera>().SetCam(this.cam);
+            this.PlayerCanvas.GetComponent<Renderer>().enabled = false;
         }
         else
         {
             this.transform.position = new Vector3(0, 0, 0);
+            this.PlayerCanvas = GameObject.Find("PlayerCanvas").GetComponent<Canvas>();
+            this.PlayerCanvas.GetComponent<CanvasFollowCamera>().SetCam(this.cam);
+            this.DeityCanvas.GetComponent<Renderer>().enabled = false;
         }
+
     }
 
     public void SetLocation (MazeCell cell) {
@@ -100,7 +111,7 @@ public class Player : NetworkBehaviour {
         this.transform.rotation = playerRotation;
         */
 
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        Vector3 move = new Vector3(0, 0, Input.GetAxis("Vertical"));
         move = cam.transform.TransformDirection(move);
         move.y = 0;
         move *= speed;

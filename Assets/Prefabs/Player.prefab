@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33323089753619402}
   - component: {fileID: 65304319675806764}
   - component: {fileID: 23366939376849734}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 114660891985392266}
   - component: {fileID: 143288261212533026}
   - component: {fileID: 136290088672153302}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 81672768386235532}
   - component: {fileID: 114592560376349350}
   - component: {fileID: 114821269978435484}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Camera
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -310,8 +310,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 20675502695153422}
-  isDeity: 1
-  speed: 5
+  isDeity: 0
+  speed: 2
+  UICanvas: {fileID: 0}
 --- !u!124 &124303367561477246
 Behaviour:
   m_ObjectHideFlags: 1
