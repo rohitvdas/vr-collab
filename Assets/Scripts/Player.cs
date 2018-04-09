@@ -21,23 +21,26 @@ public class Player : NetworkBehaviour {
 
     public Canvas DeityCanvas;
 
+    public GameObject body;
+
     private void Start()
     {
         _controller = GetComponent<CharacterController>();
+        //this.DeityCanvas = GameObject.Find("DeityCanvas").GetComponent<Canvas>();
+        //this.PlayerCanvas = GameObject.Find("PlayerCanvas").GetComponent<Canvas>();
+
         if (isDeity)
         {
             this.transform.position = new Vector3(0, 15, -20);
             //this.transform.Rotate(40, 0, 0);
-            this.DeityCanvas = GameObject.Find("DeityCanvas").GetComponent<Canvas>();
-            this.DeityCanvas.GetComponent<CanvasFollowCamera>().SetCam(this.cam);
-            this.PlayerCanvas.GetComponent<Renderer>().enabled = false;
+            //this.DeityCanvas.GetComponent<CanvasFollowCamera>().SetCam(this.cam);
+            //this.PlayerCanvas.GetComponent<Renderer>().enabled = false;
         }
         else
         {
             this.transform.position = new Vector3(0, 0, 0);
-            this.PlayerCanvas = GameObject.Find("PlayerCanvas").GetComponent<Canvas>();
-            this.PlayerCanvas.GetComponent<CanvasFollowCamera>().SetCam(this.cam);
-            this.DeityCanvas.GetComponent<Renderer>().enabled = false;
+            //this.PlayerCanvas.GetComponent<CanvasFollowCamera>().SetCam(this.cam);
+            //this.DeityCanvas.GetComponent<Renderer>().enabled = false;
         }
 
     }
@@ -116,6 +119,13 @@ public class Player : NetworkBehaviour {
         move.y = 0;
         move *= speed;
         _controller.Move(move * Time.deltaTime);
+
+        //Quaternion toRotate = cam.transform.rotation;
+        //toRotate.x = 0;
+        //toRotate.z = 0;
+       // toRotate.w = 0;
+        body.transform.rotation = cam.transform.rotation;
+        
         //transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f, 0);
         /*
         if(move!=Vector3.zero)

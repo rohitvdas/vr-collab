@@ -23,11 +23,15 @@ public class GameManager : NetworkBehaviour {
 
     public AudioClip coin;
 
+    public Canvas textCanvas;
+
     AudioSource aScorce;
 
 	private void Start () {
 		BeginGame();
         aScorce = this.GetComponent<AudioSource>();
+        //coinText = textCanvas.transform.GetChild(0).GetComponent<Text>();
+        //countdownText = textCanvas.transform.GetChild(1).GetComponent<Text>();
 	}
 	
 	private void Update () {

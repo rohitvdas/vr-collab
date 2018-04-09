@@ -25,8 +25,8 @@ public class CanvasFollowCamera : MonoBehaviour {
         Vector3 v = cameraToLookAt.transform.position - transform.position;
         v.x = v.z = 0.0f;
         transform.LookAt(cameraToLookAt.transform.position - v);
-        transform.position = cameraToLookAt.transform.position + Vector3.forward * 10.0f;
-        transform.Rotate(0, 180, 0);
+        transform.position = cameraToLookAt.transform.position - cameraToLookAt.transform.forward * 10.0f;
+        //transform.Rotate(0, 180, 0);
         //transform.rotation = cameraToLookAt.transform.rotation;
     }
 

@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed5f8bc05df4a4ad3af67b96d059209f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enablePathTracing: 0
+  enablePathTracing: 1
   coordinates:
     x: 0
     z: 0
