@@ -120,11 +120,12 @@ public class Player : NetworkBehaviour {
         move *= speed;
         _controller.Move(move * Time.deltaTime);
 
-        //Quaternion toRotate = cam.transform.rotation;
+        Quaternion toRotate = body.transform.rotation;
+        toRotate.y = cam.transform.rotation.y;
         //toRotate.x = 0;
         //toRotate.z = 0;
        // toRotate.w = 0;
-        body.transform.rotation = cam.transform.rotation;
+        body.transform.rotation = toRotate;
         
         //transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f, 0);
         /*

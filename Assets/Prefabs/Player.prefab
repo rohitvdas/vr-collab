@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 20675502695153422}
-  isDeity: 1
+  isDeity: 0
   speed: 2
   PlayerCanvas: {fileID: 0}
   DeityCanvas: {fileID: 0}

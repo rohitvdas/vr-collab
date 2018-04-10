@@ -32,6 +32,8 @@ public class Maze : NetworkBehaviour
 
 	private List<MazeRoom> rooms = new List<MazeRoom>();
 
+    public int randomSeed;
+
 	public IntVector2 RandomCoordinates {
 		get {
 			return new IntVector2(Random.Range(0, size.x), Random.Range(0, size.z));
@@ -47,7 +49,7 @@ public class Maze : NetworkBehaviour
 	}
 
 	public void Generate () {
-        Random.InitState(4); 
+        Random.InitState(randomSeed); 
 		//WaitForSeconds delay = new WaitForSeconds(generationStepDelay);
 		cells = new MazeCell[size.x, size.z];
 		List<MazeCell> activeCells = new List<MazeCell>();
